@@ -1,0 +1,48 @@
+{
+  "name": "MaintenanceTool",
+  "version": "0.0.1",
+  "description": "",
+  "main": "cluster.js",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node --harmony cluster",
+    "test": "node_modules/.bin/mocha",
+    "test watch": "node_modules/.bin/mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "author": "Mateusz Badziong",
+  "license": "UNKNOWN",
+  "devDependencies": {
+    "bower": "^1.6.x",
+    "mocha": "^2.3.3",
+    "grunt": "^0.4.5",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "less-middleware": "*"
+  },
+  "dependencies": {
+    "baconjs": "^0.7.73",
+    "body-parser": "^1.15.0",
+    "chai": "^3.4.1",
+    "express": "^4.8.0",
+    "express-ntlm": "*",
+    "json-middleware": "^1.0.2",
+    "nedb": "^1.2.1",
+    "nodemailer": "*",
+    "promise": "^7.0.4",
+    "q-io": "^1.13.1",
+    "socket.io": "^1.4.5",
+    "unirest": "*",
+    "websocket": "^1.0.22",
+    "cluster": "*"
+  },
+  "engines": {
+    "node": "^4.4.2"
+  }
+}

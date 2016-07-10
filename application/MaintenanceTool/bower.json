@@ -1,0 +1,62 @@
+{
+  "name": "maintenanceTool",
+  "version": "0.0.1",
+  "authors": [
+    "Mateusz Badziong <mateusz.badziong@gmail.com>"
+  ],
+  "license": "UNKNOWN",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "jquery-ui": "^1.11.4",
+    "bootstrap": "~3.3.4",
+    "angular-route": "~1.4.0",
+    "angular": "^1.5.3",
+    "bacon": "^0.7.x",
+    "angular-bacon": "^2.0.0",
+    "materialize": "~0.97.6"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "js": "dist/jquery.js"
+    },
+    "angular": {
+      "js": "angular.js"
+    },
+    "jquery-ui": {
+      "js": "jquery-ui.js"
+    },
+    "angular-route": {
+      "js": "angular-route.js"
+    },
+    "bacon": {
+      "js": "dist/bacon.js"
+    },
+    "angular-bacon": {
+      "js": "dist/angular-bacon.js"
+    },
+    "bootstrap": {
+      "css": [
+        "dist/css/bootstrap.css",
+        "dist/css/bootstrap-theme.css"
+      ],
+      "js": "dist/js/bootstrap.js"
+    },
+    "materialize": {
+      "css": [
+        "dist/css/materialize.css"
+      ],
+      "js": "dist/js/materialize.js"
+    }
+  },
+  "resolutions": {
+    "angular": ">=1.2"
+  }
+}

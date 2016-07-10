@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#nav-mobile .user {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.member, .unreachable, .seen-by {
+  padding: 2px 5px;
+}
+
+.member > .Host:before {
+  content: "Host: ";
+  color: #999;
+}
+
+.member > .Port:before {
+  content: "Port: ";
+  color: #999;
+}
+
+.member > .System:before {
+  content: "System: ";
+  color: #999;
+}
+
+.member > .Protocol:before {
+  content: "Protocol: ";
+  color: #999;
+}
+
+.member > .Roles:before {
+  content: "Roles: ";
+  color: #999;
+}
+
+.input-group {
+  display: table;
+}
+
+.input-group input, .suffix {
+  display: table-cell;
+}
+
+.suffix {
+  width:1%;
+}
+
+
+.btn, .btn-large,
+.btn-flat {
+  padding: 0 1.8rem;
+}

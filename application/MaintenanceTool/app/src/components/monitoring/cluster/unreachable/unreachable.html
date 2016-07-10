@@ -1,0 +1,22 @@
+<div class="preloader-wrapper big active" ng-hide="state.ClusterState.Unreachable">
+    <div class="spinner-layer spinner-red-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+    </div><div class="circle-clipper right">
+        <div class="circle"></div>
+    </div>
+    </div>
+</div>
+
+<div ng-repeat="member in state.ClusterState.Unreachable" data-id="{{member.Port}}"
+     ng-class="{active: isLeader(member)}" class="col m2">
+    <div class="member unreachable deep-orange lighten-4 card">
+        <div class="Host">{{member.UniqueAddress.Address.Host}}</div>
+        <div class="Port">{{member.UniqueAddress.Address.Port}}</div>
+        <div class="System">{{member.UniqueAddress.Address.System}}</div>
+        <div class="Protocol">{{member.UniqueAddress.Address.Protocol}}</div>
+        <div class="Roles">{{member.Roles.join(', ')}}</div>
+    </div>
+</div>

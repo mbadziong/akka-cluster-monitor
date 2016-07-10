@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Akka.Cluster maintenance tool</title>
+
+    <link rel="stylesheet" href="lib/css/materialize/materialize.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="lib/js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="lib/js/materialize/materialize.js"></script>
+    <script type="text/javascript" src="lib/js/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/js/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="lib/js/bacon/bacon.js"></script>
+    <script type="text/javascript" src="lib/js/angular-bacon/angular-bacon.js"></script>
+
+
+    <!-- entry point -->
+    <script type="text/javascript" src="src/maintenanceTool.js"></script>
+
+    <!-- services -->
+    <script type="text/javascript" src="src/components/services/persistenceService.js"></script>
+    <script type="text/javascript" src="src/components/services/socketService.js"></script>
+    <script type="text/javascript" src="src/components/services/toastService.js"></script>
+
+    <!-- navigation -->
+    <script type="text/javascript" src="src/components/navigation/navigation.js"></script>
+    <script type="text/javascript" src="src/components/navigation/navigationController.js"></script>
+
+    <!-- monitoring -->
+    <script type="text/javascript" src="src/components/monitoring/monitoringController.js"></script>
+    <script type="text/javascript" src="src/components/monitoring/slider/reservationSliderController.js"></script>
+    <script type="text/javascript" src="src/components/monitoring/monitoring.js"></script>
+    <script type="text/javascript" src="src/components/monitoring/slider/reservationTime.js"></script>
+    <script type="text/javascript" src="src/components/monitoring/cluster/cluster.js"></script>
+
+    <!-- management -->
+    <script type="text/javascript" src="src/components/management/managementController.js"></script>
+    <script type="text/javascript" src="src/components/management/management.js"></script>
+
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body ng-app="maintenanceTool">
+    <nav>
+        <div class="nav-wrapper indigo">
+            <a href="#" class="brand-logo">Akka.Cluster maintenance tool</a>
+            <div id="nav" ng-include="'src/components/navigation/navigation.html'"></div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div id="Content" ng-view></div>
+        </div>
+    </main>
+
+
+    <footer class="page-footer indigo">
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright 2016 &copy; Mateusz Badziong
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

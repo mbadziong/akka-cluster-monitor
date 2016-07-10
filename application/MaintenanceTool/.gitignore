@@ -1,0 +1,7 @@
+Thumbs.db
+node_modules
+app/lib
+app/css/
+npm-debug.log
+bower_components
+.idea

@@ -1,0 +1,26 @@
+<div class="preloader-wrapper big active" ng-hide="state.ClusterState.SeenBy">
+    <div class="spinner-layer spinner-green-only">
+        <div class="circle-clipper left">
+            <div class="circle"></div>
+        </div><div class="gap-patch">
+        <div class="circle"></div>
+    </div><div class="circle-clipper right">
+        <div class="circle"></div>
+    </div>
+    </div>
+</div>
+
+<div ng-repeat="member in state.ClusterState.SeenBy" data-id="{{member.Port}}"
+     class="col m2">
+    <div ng-class="isLeader(member)">
+        <div class="Host">{{member.Host}}</div>
+        <div class="Port">{{member.Port}}</div>
+        <div class="System">{{member.System}}</div>
+        <div class="Protocol">{{member.Protocol}}</div>
+        <div class="center">
+            <a class="btn-floating waves-effect waves-light red" ng-click="downRequest(member)" title="Shutdown"><i class="material-icons right">power_settings_new</i></a>
+
+        </div>
+
+    </div>
+</div>

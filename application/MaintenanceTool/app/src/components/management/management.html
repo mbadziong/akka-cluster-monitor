@@ -1,0 +1,80 @@
+<ul class="collapsible" data-collapsible="expandable">
+    <li>
+        <div class="collapsible-header indigo lighten-3"><i class="large material-icons">chat_bubble_outline</i>Notifications
+        </div>
+        <div class="collapsible-body">
+            <div class="row">
+                <div class="col offset-s1 s13 center-align">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <div class="switch">
+                                <label>
+                                    <p>Email me when any node fails</p>
+                                    Off
+                                    <input enabled ng-model="emails" ng-change="emailNotificationChanged()"
+                                           type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="collapsible-header blue lighten-3"><i class="large material-icons">clear_all</i>Tasks</div>
+        <div class="collapsible-body">
+            <div class="row">
+                <form class="col s5 offset-s1">
+                    <div class="card">
+                        <div class="input-group card-content white-text">
+                            <ul>
+                                <li><input value="cleanup" ng-model="selectedTask" name="group1" type="radio"
+                                           id="cleanup"/>
+                                    <label for="cleanup">Cleanup Node's OS</label></li>
+                                <li>
+                                    <input value="copylogs" ng-model="selectedTask" name="group1" type="radio"
+                                           id="copylogs"/>
+                                    <label for="copylogs">Copy logs from Node</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-action">
+                            <a ng-click="taskRequest()" class="waves-effect waves-light btn">Send</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+
+    <li>
+        <div class="collapsible-header  light-blue lighten-3">
+            <i class="large material-icons">
+                message
+            </i>
+            Complex Command
+        </div>
+        <div class="collapsible-body">
+            <div class="row">
+                <form class="col s10 offset-s1">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea ng-model="complexCommandCode" id="code" class="materialize-textarea"></textarea>
+                                    <label for="code">C# code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-action">
+                            <a ng-click="complexCommandRequest()" class="waves-effect waves-light btn">Send</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+</ul>

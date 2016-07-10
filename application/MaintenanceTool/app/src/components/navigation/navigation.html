@@ -1,0 +1,11 @@
+<ul id="nav-mobile" class="right hide-on-med-and-down" ng-controller="NavigationController">
+    <li ng-class="{'active' : pageOpened('monitoring')}" ng-disabled="pageOpened('monitoring')">
+        <a ng-href="#/monitoring">Monitoring</a>
+    </li>
+    <li ng-class="{'active' : pageOpened('management')}" ng-disabled="pageOpened('management')">
+        <a ng-href="#/management">Management</a>
+    </li>
+    <li>
+        <div class="user">[{{username}}]</div>
+    </li>
+</ul>
