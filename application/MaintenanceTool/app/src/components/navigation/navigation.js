@@ -1,15 +1,15 @@
-(function () {
-    'use strict';
-
-    function NavigationService() {
-        var NavigationService = {};
-
-        NavigationService.currentlyOpenedPage = "";
-
-        return NavigationService;
-    }
+(function() {
+'use strict';
 
     angular
         .module('maintenanceTool')
         .factory('NavigationService', NavigationService);
-}());
+
+    function NavigationService() {
+        var service = {
+            currentlyOpenedPage: ""
+        };
+        
+        return service;
+    }
+})();

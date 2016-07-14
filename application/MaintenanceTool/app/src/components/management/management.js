@@ -1,21 +1,23 @@
-(function () {
-    'use strict';
+(function() {
+'use strict';
+
+    angular
+        .module('maintenanceTool')
+        .factory('ManagementService', ManagementService);
 
     function ManagementService() {
-        var ManagementService = {};
+        var service = {
+            getComplexCommandCode:getComplexCommandCode
+        };
+        
+        return service;
 
-        ManagementService.getComplexCommandCode = function () {
+        function getComplexCommandCode() {
             return `
                 var x = 0.5;
                 var y = 2;
                 return x / y;
                     `;
-        };
-
-        return ManagementService;
+        }
     }
-
-    angular
-        .module('maintenanceTool')
-        .factory('ManagementService', [ManagementService]);
-}());
+})();

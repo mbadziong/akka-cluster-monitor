@@ -1,19 +1,20 @@
 (function () {
     'use strict';
 
-    var WebSocketClient = require('websocket').client;
-    var wsClient = new WebSocketClient();
-    var Bacon = require('baconjs').Bacon;
-    var MailUtils = require('../utils/mailSender');
-    var isValidClusterStatus = require('./clusterStatusValidator').isValidClusterStatus;
-    var isValidWebSocketMessage = require('./webSocketMessageValidator').isValidWebSocketMessage;
+    const WebSocketClient = require('websocket').client;
+    const wsClient = new WebSocketClient();
+    const Bacon = require('baconjs').Bacon;
+    const MailUtils = require('../utils/mailSender');
+    const isValidClusterStatus = require('./clusterStatusValidator').isValidClusterStatus;
+    const isValidWebSocketMessage = require('./webSocketMessageValidator').isValidWebSocketMessage;
 
     const WS_URL = 'ws://localhost:1234/';
     const Thirty_Minutes = 30 * 60 * 1000;
+    
     let sockets;
     let wsConnection;
-    var latestState = undefined;
-    var pause = false;
+    let latestState = undefined;
+    let pause = false;
 
     wsClient.on('connectFailed', error => {
         console.log('Connect Error: ' + error.toString());

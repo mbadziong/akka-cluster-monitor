@@ -1,10 +1,19 @@
-(function () {
-    'use strict';
+(function() {
+'use strict';
 
+    angular
+        .module('maintenanceTool')
+        .factory('ClusterService', ClusterService);
+
+    ClusterService.$inject = ['PersistenceService'];
     function ClusterService(persistenceService) {
-        var ClusterService = {};
+        var service = {
+            isLeader:isLeader
+        };
+        
+        return service;
 
-        ClusterService.isLeader = function (member) {
+        function isLeader(member) {
             var currentState = persistenceService.getClusterState();
 
             if (currentState === undefined) {
@@ -21,12 +30,6 @@
                 leader.Port === member.Port &&
                 leader.System === member.System &&
                 leader.Protocol === member.Protocol;
-        };
-
-        return ClusterService;
+        }
     }
-
-    angular
-        .module('maintenanceTool')
-        .factory('ClusterService', ['PersistenceService', ClusterService]);
-}());
+})();
